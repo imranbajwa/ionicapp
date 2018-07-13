@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Enter your Data</h3>
+
+  <form (ngSubmit)="addItem(model)">
+      <ion-item>
+        <ion-input [(ngModel)]="model.FIRSTNAME" placeholder="FIRSTNAME" type="text" name="FIRSTNAME" required ></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-input [(ngModel)]="model.LASTNAME" placeholder="LASTNAME" type="text" name="LASTNAME" required ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="model.AGE" placeholder="AGE" type="text" name="AGE" required ></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="model.OCCUPATION" placeholder="OCCUPATION" type="text" name="OCCUPATION" required ></ion-input>
+    </ion-item>
+
+      <button ion-button type="submit" block>ADD PROFILE</button>
+    </form>
+
+
+</ion-content>
